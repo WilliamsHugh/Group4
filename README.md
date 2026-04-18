@@ -45,3 +45,13 @@
    ```bash
    git clone <link-repo-cua-ban>
    cd <ten-thu-muc-project>
+   ```
+2. **Cài đặt thư viện:**
+   ```bash
+   npm install
+   ```
+3. **Chạy ứng dụng ở môi trường development:**
+   ```bash
+   npm start
+   ```
+   Ứng dụng sẽ chạy tại địa chỉ: http://localhost:3000

@@ -1,0 +1,204 @@
+/* ─── Google Fonts ─────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ─── Reset ────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Design Tokens: Light Mode ────────────────────────────────────────── */
+:root,
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary:        #f5f3ff;
+  --bg-secondary:      #ede9fe;
+
+  /* Cards & Surfaces */
+  --card-bg:           #ffffff;
+  --card-shadow:       0 2px 8px rgba(109, 40, 217, 0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --card-hover-shadow: 0 8px 24px rgba(109, 40, 217, 0.14), 0 2px 6px rgba(0,0,0,0.06);
+
+  /* Header */
+  --header-bg:         rgba(255, 255, 255, 0.85);
+  --header-shadow:     0 1px 0 rgba(109, 40, 217, 0.08), 0 4px 16px rgba(109, 40, 217, 0.06);
+
+  /* Text */
+  --text-primary:      #1e1b4b;
+  --text-secondary:    #4c1d95;
+  --text-muted:        #7c3aed80;
+
+  /* Borders */
+  --border-color:      #ddd6fe;
+  --border-light:      #ede9fe;
+  --border-hover:      #a78bfa;
+
+  /* Badge */
+  --badge-bg:          #f5f3ff;
+  --badge-border:      #ddd6fe;
+  --badge-shadow:      0 2px 6px rgba(139, 92, 246, 0.12);
+
+  /* Toggle */
+  --toggle-bg:         #f5f3ff;
+  --toggle-border:     #ddd6fe;
+  --toggle-shadow:     0 1px 4px rgba(139, 92, 246, 0.1);
+  --toggle-hover-bg:   #ede9fe;
+  --toggle-hover-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+
+  /* Accent */
+  --accent-purple:     #7c3aed;
+  --title-gradient:    linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+
+  /* Buttons */
+  --btn-add-bg:        linear-gradient(135deg, #7c3aed, #6d28d9);
+  --btn-add-hover:     linear-gradient(135deg, #6d28d9, #5b21b6);
+  --btn-delete-bg:     #fff5f5;
+  --btn-delete-color:  #dc2626;
+  --btn-delete-border: #fecaca;
+
+  /* Inputs */
+  --input-footer-bg:   #fafafa;
+  --placeholder-color: #c4b5fd;
+
+  /* Footer */
+  --footer-bg:         rgba(245, 243, 255, 0.8);
+}
+
+/* ─── Design Tokens: Dark Mode ─────────────────────────────────────────── */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary:        #0f0a1e;
+  --bg-secondary:      #1a1033;
+
+  /* Cards & Surfaces */
+  --card-bg:           #1c1235;
+  --card-shadow:       0 2px 8px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+  --card-hover-shadow: 0 8px 24px rgba(139, 92, 246, 0.2), 0 2px 6px rgba(0,0,0,0.3);
+
+  /* Header */
+  --header-bg:         rgba(15, 10, 30, 0.9);
+  --header-shadow:     0 1px 0 rgba(139, 92, 246, 0.15), 0 4px 20px rgba(0,0,0,0.3);
+
+  /* Text */
+  --text-primary:      #ede9fe;
+  --text-secondary:    #c4b5fd;
+  --text-muted:        #7c6aab;
+
+  /* Borders */
+  --border-color:      #2d2060;
+  --border-light:      #1e1645;
+  --border-hover:      #6d28d9;
+
+  /* Badge */
+  --badge-bg:          #1c1235;
+  --badge-border:      #2d2060;
+  --badge-shadow:      0 2px 8px rgba(0,0,0,0.4);
+
+  /* Toggle */
+  --toggle-bg:         #1c1235;
+  --toggle-border:     #2d2060;
+  --toggle-shadow:     0 1px 4px rgba(0,0,0,0.4);
+  --toggle-hover-bg:   #2d2060;
+  --toggle-hover-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+
+  /* Accent */
+  --accent-purple:     #a78bfa;
+  --title-gradient:    linear-gradient(135deg, #a78bfa 0%, #c4b5fd 100%);
+
+  /* Buttons */
+  --btn-add-bg:        linear-gradient(135deg, #7c3aed, #6d28d9);
+  --btn-add-hover:     linear-gradient(135deg, #8b5cf6, #7c3aed);
+  --btn-delete-bg:     rgba(239, 68, 68, 0.1);
+  --btn-delete-color:  #f87171;
+  --btn-delete-border: rgba(239, 68, 68, 0.25);
+
+  /* Inputs */
+  --input-footer-bg:   #150e2a;
+  --placeholder-color: #4a3a7a;
+
+  /* Footer */
+  --footer-bg:         rgba(15, 10, 30, 0.6);
+}
+
+/* ─── Base Styles ──────────────────────────────────────────────────────── */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', var(--font-inter), -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar Styling ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-purple);
+}
+
+/* ─── Selection ─────────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(139, 92, 246, 0.25);
+  color: var(--text-primary);
+}
+
+/* ─── Decorative background gradient blobs ──────────────────────────────── */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+body::before {
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+}
+
+body::after {
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.1) 0%, transparent 70%);
+}
+
+[data-theme="dark"] body::before {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
+}
+[data-theme="dark"] body::after {
+  background: radial-gradient(circle, rgba(109, 40, 217, 0.15) 0%, transparent 70%);
+}
+
+/* Make sure content appears above blobs */
+#__next,
+main,
+header,
+footer {
+  position: relative;
+  z-index: 1;
+}

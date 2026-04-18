@@ -1,0 +1,151 @@
+.noteItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.25s ease;
+  animation: slideIn 0.35s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.noteItem:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-2px);
+}
+
+.noteItem.deleting {
+  opacity: 0;
+  transform: scale(0.95) translateX(20px);
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.noteContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.noteText {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.noteDate {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.noteDate::before {
+  content: '🕐';
+  font-size: 0.7rem;
+}
+
+.noteActions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.deleteBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  background: var(--btn-delete-bg);
+  color: var(--btn-delete-color);
+  border: 1px solid var(--btn-delete-border);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.deleteBtn:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
+}
+
+.deleteBtn:active {
+  transform: translateY(0);
+}
+
+.confirmGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: popIn 0.2s ease;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.confirmText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.actionBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmYes {
+  background: #ef4444;
+  color: #fff;
+}
+
+.confirmYes:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+.confirmNo {
+  background: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.confirmNo:hover {
+  background: var(--border-hover);
+  transform: scale(1.1);
+}

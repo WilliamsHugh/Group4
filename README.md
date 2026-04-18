@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Ứng dụng Ghi Chú Cá Nhân (Note App)
 
-## Getting Started
+Đây là một ứng dụng quản lý ghi chú cá nhân đơn giản được xây dựng bằng NextJS, tập trung vào việc thực hành các kiến thức cơ bản về Hooks, Props, Context API và LocalStorage.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 👤 Thông tin sinh viên
+- **Họ và tên:** Trần Trường Thuận
+- **Mã số sinh viên (MSSV):** N23DCCN060
+- **Học phần:** Thực hành Lập trình Web
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✨ Tính năng chính
+Ứng dụng hoàn thành đầy đủ các yêu cầu của bài tập thực hành:
+- **Quản lý ghi chú:** Thêm ghi chú mới và xóa các ghi chú hiện có (`useState`).
+- **Thống kê:** Đếm và hiển thị tổng số lượng ghi chú ngay trên Header (`props`).
+- **Chế độ giao diện:** Hỗ trợ chuyển đổi linh hoạt giữa Dark Mode và Light Mode (`Context API` + `useContext`).
+- **Lưu trữ dữ liệu:** Tự động lưu và khôi phục dữ liệu ghi chú khi tải lại trang (`useEffect` + `localStorage`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 Công nghệ sử dụng
+- **Frontend:** ReactJS (Functional Components)
+- **Styling:** CSS3 / Tailwind CSS (tùy biến theo giao diện Sáng/Tối)
+- **Quản lý trạng thái:** React Hooks (`useState`, `useEffect`, `useContext`)
+- **Lưu trữ:** Web Storage API (LocalStorage)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Hướng dẫn cài đặt và chạy ứng dụng
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone project:**
+   ```bash
+   git clone <link-repo-cua-ban>
+   cd <ten-thu-muc-project>
